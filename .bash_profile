@@ -5,7 +5,7 @@ source "$DIR/.aliases"
 source "$DIR/.bash_prompt"
 
 if [ "$(uname)" == "Darwin" ]; then
-    source "$DIR/.alises_osx"
+    source "$DIR/.aliases_osx"
 elif [ "$(uname)" == "Linux" ]; then
-    source "$DIR/.alises_linux"
+    source "$DIR/.aliases_linux"
 fi
