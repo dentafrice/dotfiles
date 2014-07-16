@@ -1,0 +1,15 @@
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[user]
+	email = mingle@uber.com
+	name = Caleb Mingle
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
