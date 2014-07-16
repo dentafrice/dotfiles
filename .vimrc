@@ -1,5 +1,4 @@
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
 set nu
 set showmatch
@@ -9,6 +8,11 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 fun! s:ToggleMouse()
     if !exists("s:old_mouse")
