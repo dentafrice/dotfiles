@@ -6,6 +6,6 @@ source "$DIR/.bash_prompt"
 
 if [ "$(uname)" == "Darwin" ]; then
     source "$DIR/.alises_osx"
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ "$(uname)" == "Linux" ]; then
     source "$DIR/.alises_linux"
 fi
