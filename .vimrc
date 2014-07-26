@@ -10,6 +10,9 @@ syntax enable
 " status
 set laststatus=2
 
+" tab line
+set showtabline=2
+
 " tabs
 set tabstop=4
 set shiftwidth=4
