@@ -1,2 +1,2 @@
 alias dotfiles="cd ~/dotfiles/"
-alias bash_reload="source ~/.bash_profile"
+
