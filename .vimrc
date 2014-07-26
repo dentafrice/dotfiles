@@ -5,6 +5,7 @@ set nu
 set showmatch
 set hlsearch
 set mouse=a
+set cursorline
 syntax enable
 
 " status
