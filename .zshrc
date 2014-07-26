@@ -16,4 +16,8 @@ elif [ `uname` = "Linux" ]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-source $DOTFILES/inc/rprompt.sh # right hand prompt override.
+
+for inc_file ($DOTFILES/inc/*.all.sh); do
+    source $inc_file
+done
+
