@@ -8,6 +8,9 @@ set mouse=a
 set cursorline
 syntax enable
 
+" auto reload if changed outside of vim
+set autoread
+
 " status
 set laststatus=2
 
