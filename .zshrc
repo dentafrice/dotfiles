@@ -3,7 +3,7 @@ export ZSH=$DOTFILES/oh-my-zsh
 
 ZSH_THEME="avit"
 
-plugins=(git virtualenv)
+plugins=(git virtualenv virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/.aliases
