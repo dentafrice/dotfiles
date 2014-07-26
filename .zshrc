@@ -2,6 +2,7 @@ export DOTFILES=$HOME/dotfiles
 export ZSH=$DOTFILES/oh-my-zsh
 
 ZSH_THEME="avit"
+ZSH_CUSTOM="$DOTFILES/inc/zsh"
 
 plugins=(git virtualenv)
 
@@ -12,11 +13,6 @@ fi
 
 # Load OMZ
 source $ZSH/oh-my-zsh.sh
-
-# Load all includes
-for inc_file ($DOTFILES/inc/all/*); do
-    source $inc_file
-done
 
 # Load OSX Includes
 if [ `uname` = "Darwin" ]; then
