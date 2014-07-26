@@ -1,1 +1,2 @@
 alias ls="ls --color"
+alias work="tmux attach -t work"
