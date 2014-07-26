@@ -21,4 +21,4 @@ fi
 
 # Load OMZ
 source $ZSH/oh-my-zsh.sh
-
+source $DOTFILES/inc/zsh/rprompt.zsh # needs to happen after the theme
