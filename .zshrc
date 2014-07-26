@@ -5,19 +5,34 @@ ZSH_THEME="avit"
 
 plugins=(git virtualenv)
 
-source $DOTFILES/.aliases
-
+# Load virtualenvwrapper only on OSX
 if [ `uname` = "Darwin" ]; then
-    # Custom OSX Source
     plugins=(virtualenvwrapper $plugins)
-elif [ `uname` = "Linux" ]; then
-    source "$DOTFILES/.ssh_auth"
-    source "$DOTFILES/.aliases_linux"
 fi
 
+# Load OMZ
 source $ZSH/oh-my-zsh.sh
 
-for inc_file ($DOTFILES/inc/*.all.sh); do
+# Load all includes
+for inc_file ($DOTFILES/inc/all/*); do
     source $inc_file
 done
+
+# Load OSX Includes
+if [ `uname` = "Darwin" ]; then
+    if [ -d "$DOTFILES/inc/osx" ]; then
+        for inc_file ($DOTFILES/inc/osx/*); do
+            source $inc_file
+        done
+    fi
+fi
+
+# Load Linux Includes
+if [ `uname` = "Linux" ]; then
+    if [ -d "$DOTFILES/inc/linux" ]; then
+        for inc_file ($DOTFILES/inc/linux/*); do
+            source $inc_file
+        done
+    fi
+fi
 
