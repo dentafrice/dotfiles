@@ -7,7 +7,12 @@
 [user]
 	email = mingle@uber.com
 	name = Caleb Mingle
-
+[alias]
+    st = status
+    co = checkout
+    ds = diff --staged
+    unstage = reset HEAD
+    back = reset --soft HEAD~
 [color]
 	ui = auto
 	diff = auto
