@@ -27,10 +27,15 @@ set expandtab
 set background=dark
 colorscheme solarized
 
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 " nerd tree
 let g:nerdtree_tabs_open_on_console_startup=1
 map <C-n> :NERDTreeTabsToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.swp$']
 
 " gitgutter
 let g:gitgutter_realtime = 1
