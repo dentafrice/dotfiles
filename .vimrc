@@ -31,6 +31,7 @@ endfunction
 
 let g:nerdtree_tabs_open_on_console_startup=1
 map <C-n> :NERDTreeTabsToggle<CR>
+let NERDTreeShowHidden=1
 
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
