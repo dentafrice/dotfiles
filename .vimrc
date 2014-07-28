@@ -51,4 +51,4 @@ map <leader>gb :Gblame<CR>
 
 " ignore files
 set wildignore+=*.pyc
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$']
