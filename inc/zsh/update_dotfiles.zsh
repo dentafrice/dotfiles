@@ -1,4 +1,6 @@
 function update_dotfiles() {
-    cd ~/dotfiles && ./update.sh
+    cd ~/dotfiles
+    ./update.sh
+    cd -
 }
 
