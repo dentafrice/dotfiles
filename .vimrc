@@ -48,3 +48,7 @@ set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
 map <leader>gb :Gblame<CR>
+
+" ignore files
+set wildignore+=*.pyc
+let NERDTreeIgnore = ['\.pyc$']
