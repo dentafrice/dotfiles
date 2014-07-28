@@ -46,3 +46,5 @@ highlight clear SignColumn
 " stupid bells
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+
+map <leader>gb :Gblame<CR>
