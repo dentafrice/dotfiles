@@ -74,3 +74,5 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+
+set colorcolumn=80
