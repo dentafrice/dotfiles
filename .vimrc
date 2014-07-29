@@ -55,3 +55,5 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 
 " searching
 set incsearch
+set ignorecase
+set smartcase
