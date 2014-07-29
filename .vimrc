@@ -64,3 +64,13 @@ nmap <F8> :TagbarToggle<CR>
 
 set nobackup
 set noswapfile
+
+" highlight spaces, tabs, and extended lines
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" must.. not.. arrow.
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
