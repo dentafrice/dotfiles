@@ -61,3 +61,6 @@ set smartcase
 set scrolloff=3 " show more context at end of buffer
 
 nmap <F8> :TagbarToggle<CR>
+
+set nobackup
+set noswapfile
