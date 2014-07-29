@@ -3,8 +3,10 @@ Dotfiles
 
 Requirements:
 
-`sudo apt-get install exuberant-ctags`
-`brew install ctags-exuberant`
+```
+sudo apt-get install exuberant-ctags
+brew install ctags-exuberant
+```
 
 Setting up:
 
