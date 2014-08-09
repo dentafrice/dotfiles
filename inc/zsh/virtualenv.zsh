@@ -1,8 +1,10 @@
 function virtualenv_change() {
-    if [ -e "$PWD/env/bin/activate" ]; then
-        source "$PWD/env/bin/activate"
-    elif which deactivate &> /dev/null; then
-        deactivate
+    if ! which workon >/dev/null; then
+        if [ -e "$PWD/env/bin/activate" ]; then
+            source "$PWD/env/bin/activate"
+        elif which deactivate &> /dev/null; then
+            deactivate
+        fi
     fi
 }
 
