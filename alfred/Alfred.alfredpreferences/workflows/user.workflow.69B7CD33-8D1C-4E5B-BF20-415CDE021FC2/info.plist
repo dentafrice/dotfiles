@@ -57,29 +57,14 @@
 				<key>runningsubtext</key>
 				<string>Searching URLs</string>
 				<key>script</key>
-				<string>require_once('workflows.php');
-$wf = new Workflows();
-
-$name = "{query}";
-$results = json_decode(file_get_contents('/Users/Mingle/fq.json'));
-$i = 1;
-
-foreach($results as $result) {
-    if(strpos(strtolower($result[0]), strtolower($name)) !== false) {
-        $wf-&gt;result($i, $result[1], $result[0], $result[1], '');
-        $i++;
-    }
-}
-
-if($i == 1) {
-    $wf-&gt;result(1, 'No Results', 'No Results', 'No Results', '', false);
-}
-
-echo $wf-&gt;toxml();</string>
+				<string>#!/bin/sh
+source /usr/local/bin/virtualenvwrapper.sh
+workon fq
+python fq.py {query}</string>
 				<key>title</key>
 				<string>Search Frequent URLs</string>
 				<key>type</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>

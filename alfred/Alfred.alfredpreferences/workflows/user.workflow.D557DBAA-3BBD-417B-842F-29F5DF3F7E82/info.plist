@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>7DF772F6-A44E-41D6-A540-65FAD2F46269</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>139FA692-940C-411F-B204-C6FABE5330CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>93D626FB-479D-4EF5-944D-C114598E3A33</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>139FA692-940C-411F-B204-C6FABE5330CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>A81990F7-DE41-46EF-9BF3-7C2602C33B2B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>139FA692-940C-411F-B204-C6FABE5330CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>D742458D-03A4-4FA2-BBA2-9D63E9FBEF06</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>139FA692-940C-411F-B204-C6FABE5330CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Caleb Mingle</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Arc</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>arc tasks assigned</string>
+				<key>runningsubtext</key>
+				<string>Loading from Phabricator..</string>
+				<key>script</key>
+				<string>python tasks.py assigned</string>
+				<key>title</key>
+				<string>Assigned Tasks</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A81990F7-DE41-46EF-9BF3-7C2602C33B2B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>arc tasks authored</string>
+				<key>runningsubtext</key>
+				<string>Loading from Phabricator..</string>
+				<key>script</key>
+				<string>python tasks.py authored</string>
+				<key>title</key>
+				<string>Authored Tasks</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>93D626FB-479D-4EF5-944D-C114598E3A33</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string>com.google.chrome</string>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>139FA692-940C-411F-B204-C6FABE5330CC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>arc revisions</string>
+				<key>runningsubtext</key>
+				<string>Loading from Phabricator..</string>
+				<key>script</key>
+				<string>python revisions.py {query}</string>
+				<key>subtext</key>
+				<string>Show authored revisions</string>
+				<key>title</key>
+				<string>Revisions</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D742458D-03A4-4FA2-BBA2-9D63E9FBEF06</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>arc review</string>
+				<key>runningsubtext</key>
+				<string>Loading from Phabricator..</string>
+				<key>script</key>
+				<string>python revisions.py reviewer</string>
+				<key>subtext</key>
+				<string>Show revisions I am a reviewer on</string>
+				<key>title</key>
+				<string>Review</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7DF772F6-A44E-41D6-A540-65FAD2F46269</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>139FA692-940C-411F-B204-C6FABE5330CC</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>7DF772F6-A44E-41D6-A540-65FAD2F46269</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
+		<key>93D626FB-479D-4EF5-944D-C114598E3A33</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>A81990F7-DE41-46EF-9BF3-7C2602C33B2B</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>D742458D-03A4-4FA2-BBA2-9D63E9FBEF06</key>
+		<dict>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

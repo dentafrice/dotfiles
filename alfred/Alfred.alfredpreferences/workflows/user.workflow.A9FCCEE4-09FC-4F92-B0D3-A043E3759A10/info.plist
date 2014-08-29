@@ -19,13 +19,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Caleb Mingle</string>
 	<key>description</key>
 	<string>Open Uber HQ Map</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>HQ Map</string>
+	<string>Uber - HQ Map</string>
 	<key>objects</key>
 	<array>
 		<dict>

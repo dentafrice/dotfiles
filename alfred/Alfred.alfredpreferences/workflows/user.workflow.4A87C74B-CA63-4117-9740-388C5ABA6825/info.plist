@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>2974E6EB-BC5D-4D9F-9ED5-7DB855BD7305</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3CAB6A57-C65C-450A-A495-4BCEAC101BF2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Dev</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>dev</string>
+				<key>subtext</key>
+				<string>Boxer Sync + SSH to Mingle.dev</string>
+				<key>text</key>
+				<string>Launch Dev Box</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2974E6EB-BC5D-4D9F-9ED5-7DB855BD7305</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+tell application "iTerm"
+	activate
+
+	-- make a new window
+	set work to (make new terminal)
+
+	-- talk to the new window
+	tell work
+		launch session "Remote Sync"
+		set remote_box to (launch session "Mingle.dev")
+
+		tell remote_box
+			write text "work"
+		end tell
+
+	end tell
+end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>3CAB6A57-C65C-450A-A495-4BCEAC101BF2</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>2974E6EB-BC5D-4D9F-9ED5-7DB855BD7305</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>3CAB6A57-C65C-450A-A495-4BCEAC101BF2</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
