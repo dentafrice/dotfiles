@@ -76,3 +76,8 @@ map <left> <nop>
 map <right> <nop>
 
 set colorcolumn=80
+
+" ctrl-p
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'env',
+    \ }
