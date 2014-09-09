@@ -537,9 +537,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 834 592 584 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3593 459 665 476 2560 0 2560 1418 </string>
+	<string>0 402 1050 476 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 50 1440 827 0 0 1440 878 </string>
+	<string>0 73 1434 805 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>326 333 650 451 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -8279,13 +8279,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-08-25T16:59:08Z</date>
+	<date>2014-09-01T04:36:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
-	<true/>
+	<false/>
 	<key>Show Toolbelt</key>
 	<true/>
 	<key>ShowBookmarkName</key>
