@@ -12,7 +12,7 @@ fi
 ZSH_THEME="avit"
 ZSH_CUSTOM="$DOTFILES/inc/zsh"
 
-plugins=(git virtualenv)
+plugins=(git virtualenv autojump)
 
 # Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then    
