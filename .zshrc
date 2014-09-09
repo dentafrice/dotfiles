@@ -14,11 +14,14 @@ ZSH_CUSTOM="$DOTFILES/inc/zsh"
 
 plugins=(git virtualenv)
 
-# Load virtualenvwrapper only on OSX
+# Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then    
     plugins=(virtualenvwrapper $plugins)
+    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
 
 # Load OMZ
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/inc/zsh/rprompt.zsh # needs to happen after the theme
+
+# Load autojump
