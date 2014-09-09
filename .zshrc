@@ -17,7 +17,6 @@ plugins=(git virtualenv autojump)
 # Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then    
     plugins=(virtualenvwrapper $plugins)
-    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
 
 # Load OMZ
