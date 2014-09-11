@@ -533,15 +533,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>920 284 445 270 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>878 337 924 485 0 0 2560 1418 </string>
+	<string>3438 337 924 485 2560 0 2560 1418 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 834 592 584 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 402 1050 476 0 0 1440 878 </string>
+	<string>2560 942 665 476 2560 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 73 1434 805 0 0 1440 878 </string>
+	<string>5508 346 665 476 5120 145 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>326 333 650 451 0 0 1440 878 </string>
+	<string>5120 145 1440 878 5120 145 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>107 533 718 672 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -5824,7 +5824,28 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>BounceTrigger</string>
+					<key>regex</key>
+					<string>An error was detected while syncing</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>BellTrigger</string>
+					<key>regex</key>
+					<string>An error was detected while syncing</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>AlertTrigger</string>
+					<key>parameter</key>
+					<string>SYNC IS BROKEN</string>
+					<key>regex</key>
+					<string>An error was detected while syncing</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -8279,7 +8300,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-09-01T04:36:10Z</date>
+	<date>2014-09-09T17:52:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
