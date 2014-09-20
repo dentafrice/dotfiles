@@ -8,6 +8,9 @@ set mouse=a
 set cursorline
 syntax enable
 
+" fix commenting space
+let g:NERDSpaceDelims = 1
+
 " auto reload if changed outside of vim
 set autoread
 
@@ -24,8 +27,9 @@ set softtabstop=4
 set expandtab
 
 " theme
-set background=dark
-colorscheme solarized
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
 
 " airline
 let g:airline_powerline_fonts = 1
