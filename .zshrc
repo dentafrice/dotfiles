@@ -24,3 +24,4 @@ eval "$(fasd --init auto)"
 
 # setup custom stuff
 for f in "$HOME"/dotfiles/inc/zsh/*.zsh; do source $f; done
+for f in "$HOME"/dotfiles/inc/theme/*.zsh; do source $f; done
