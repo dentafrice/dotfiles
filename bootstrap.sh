@@ -12,6 +12,9 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # tmux Configuration
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+# tmuxinator Configuration
+ln -sf ~/dotfiles/.tmuxinator ~/.tmuxinator
+
 # git Configuration
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
