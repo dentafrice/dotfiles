@@ -6,3 +6,4 @@ if [[ $IS_LINUX -eq 1 ]]; then
 fi
 
 alias v='fasd -e vim'
+alias tkill='tmux kill-session -t'
