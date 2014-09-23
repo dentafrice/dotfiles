@@ -20,7 +20,9 @@ if [[ $(uname) = 'Darwin' ]]; then
 fi
 
 # setup fasd
-eval "$(fasd --init auto)"
+if which fasd >/dev/null; then
+    eval "$(fasd --init auto)"
+fi
 
 # setup custom stuff
 for f in "$HOME"/dotfiles/inc/zsh/*.zsh; do source $f; done
