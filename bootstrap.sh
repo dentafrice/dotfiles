@@ -3,7 +3,7 @@
 . ~/dotfiles/update.sh
 
 # prezto install
-. ~/dotfiles/install_prezto.sh
+# . ~/dotfiles/install_prezto.sh
 
 # vim Configuration
 ln -sf ~/dotfiles/.vim ~/.vim
