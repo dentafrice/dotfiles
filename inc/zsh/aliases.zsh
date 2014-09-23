@@ -7,3 +7,4 @@ fi
 
 alias v='fasd -e vim'
 alias tkill='tmux kill-session -t'
+alias ta='tmux attach -t'
