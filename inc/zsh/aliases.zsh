@@ -5,3 +5,4 @@ if [[ $IS_LINUX -eq 1 ]]; then
     alias sr="supervisorctl restart"
 fi
 
+alias v='fasd -e vim'
