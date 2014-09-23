@@ -1,1 +1,1 @@
-/Users/Mingle/dotfiles/.vim
+/home/uber/dotfiles/.vim
