@@ -1,7 +1,9 @@
 #!/bin/zsh
 setopt EXTENDED_GLOB
 
-ln -sf ~/dotfiles/.zprezto ~/.zprezto
+if [ ! -L "$HOME/.zprezto" ]; then
+    ln -sf "${ZDOTDIR:-$HOME}/dotfiles/.zprezto" "$HOME/.zprezto"
+fi
 
 for rcfile in "${ZDOTDIR:-$HOME}"/dotfiles/.zprezto/runcoms/^README.md(.N); do
     cp "$rcfile" "${ZDOTDIR:-$HOME}/dotfiles/.${rcfile:t}"
