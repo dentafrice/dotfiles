@@ -1,7 +1,9 @@
+#!/bin/zsh
+
 . ~/dotfiles/update.sh
 
 # prezto install
-source ~/dotfiles/install_prezto.sh
+. ~/dotfiles/install_prezto.sh
 
 # vim Configuration
 ln -sf ~/dotfiles/.vim ~/.vim
