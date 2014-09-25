@@ -25,3 +25,8 @@ for f in "$HOME"/dotfiles/inc/theme/*.zsh; do source $f; done
 export UBER_HOME="$HOME/Uber"
 export VAGRANT_DEFAULT_PROVIDER=aws
 export PATH=$PATH:$HOME/bin
+
+# Load only OSX things
+if [[ $IS_MAC -eq 1 ]]; then    
+    [ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
+fi
