@@ -28,3 +28,6 @@ fi
 for f in "$HOME"/dotfiles/inc/zsh/*.zsh; do source $f; done
 for f in "$HOME"/dotfiles/inc/theme/*.zsh; do source $f; done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export UBER_HOME="$HOME/Uber"
+export VAGRANT_DEFAULT_PROVIDER=aws
