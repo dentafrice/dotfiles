@@ -14,7 +14,7 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # tmuxinator Configuration
 ln -sf ~/dotfiles/.pymuxinator ~/.pymuxinator
-ln -sf ~/dotfiles/.tmuxinator ~/.pymuxinator
+ln -sf ~/dotfiles/.pymuxinator ~/.tmuxinator
 
 # git Configuration
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
