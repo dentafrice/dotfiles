@@ -26,6 +26,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+
 " theme
 let g:molokai_original = 1
 let g:rehash256 = 1
