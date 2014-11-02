@@ -24,3 +24,6 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # ack configuration
 ln -sf ~/dotfiles/.ackrc ~/.ackrc
+
+# other
+ln -sf ~/dotfiles/.slate ~/.slate
