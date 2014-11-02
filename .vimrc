@@ -7,6 +7,7 @@ set hlsearch
 set mouse=a
 set cursorline
 syntax enable
+set backspace=indent,eol,start
 
 " fix commenting space
 let g:NERDSpaceDelims = 1

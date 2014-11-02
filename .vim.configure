@@ -1,0 +1,9 @@
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp \
+            --with-ruby-command=/usr/bin/ruby \
+            --enable-pythoninterp \
+            --with-python-config-dir=/usr/lib/python2.7/config \
+            --enable-perlinterp \
+            --enable-luainterp \
+            --enable-gui=no --enable-cscope --prefix=/usr --disable-nls --without-x
