@@ -1,3 +1,4 @@
+set nocompatible
 execute pathogen#infect()
 
 filetype plugin indent on
@@ -107,3 +108,8 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+
+" you complete me
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_list_select_completion = []
+let g:ycm_key_list_previous_completion = []
