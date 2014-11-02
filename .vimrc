@@ -67,6 +67,7 @@ set smartcase
 set scrolloff=3 " show more context at end of buffer
 
 nmap <F8> :TagbarToggle<CR>
+nmap <leader>; :CtrlPBuffer<CR>
 
 set nobackup
 set noswapfile
@@ -81,13 +82,27 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-set colorcolumn=80
+set colorcolumn=100
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'env',
     \ }
+let g:ctrlp_open_multiple_files = 't'
+let g:ctrlp_open_new_file = 't'
 
 " syntastic
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = '--max-line-length=100'
+
+" easy motion
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+map <Leader> <Plug>(easymotion-prefix)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
