@@ -115,3 +115,5 @@ map <Leader>h <Plug>(easymotion-linebackward)
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion = []
 let g:ycm_key_list_previous_completion = []
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
