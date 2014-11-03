@@ -30,6 +30,8 @@ set expandtab
 
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
+let g:ack_default_options = " -H --nocolor --nogroup --column"
+
 " theme
 let g:molokai_original = 1
 let g:rehash256 = 1
