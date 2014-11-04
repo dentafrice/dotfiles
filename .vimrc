@@ -117,3 +117,6 @@ let g:ycm_key_list_select_completion = []
 let g:ycm_key_list_previous_completion = []
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
+
+" tagbar
+let g:tagbar_autofocus = 0 
