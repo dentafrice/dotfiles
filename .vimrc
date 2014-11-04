@@ -119,4 +119,4 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
 
 " tagbar
-let g:tagbar_autofocus = 0 
+let g:tagbar_autofocus = 1
