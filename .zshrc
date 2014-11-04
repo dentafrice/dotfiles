@@ -12,6 +12,10 @@ if [[ $(uname) = 'Darwin' ]]; then
     IS_MAC=1
 fi
 
+if [[ "$VIRTUAL_ENV" != "" ]]; then
+    source "$VIRTUAL_ENV/bin/activate"
+fi
+
 # setup fasd
 if which fasd >/dev/null; then
     eval "$(fasd --init auto)"
