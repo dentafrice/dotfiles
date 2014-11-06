@@ -60,6 +60,7 @@ set smartindent
 set autoindent
 
 " key bindings
+let mapleader = ",""
 set pastetoggle=<F3>
 nnoremap <silent> <Space> :noh<CR>
 
@@ -134,3 +135,18 @@ let g:ycm_key_list_previous_completion = []
 
 "" tagbar
 let g:tagbar_autofocus = 1
+
+" functions
+
+"" Strip trailing whitespace on save
+
+fun! <SID>StripTrailingWhitespaces()
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    let @/=_s
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
