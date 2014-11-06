@@ -49,6 +49,7 @@ set expandtab
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 
 " key bindings
+set pastetoggle=<F3>
 
 "" nerdtree
 map <C-n> :NERDTreeTabsToggle<CR> " toggle NERDTree
