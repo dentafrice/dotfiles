@@ -64,6 +64,12 @@ let mapleader = ",""
 set pastetoggle=<F3>
 nnoremap <silent> <Space> :noh<CR>
 
+if has('mac')
+    nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
+elseif has('unix')
+    nnoremap <leader>y :call system('nc --send-only localhost 8377', @0)<CR>
+endif
+
 "" helpers
 nnoremap gr /Reviewers:<CR>A
 
