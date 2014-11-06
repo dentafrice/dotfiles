@@ -1,1 +1,11 @@
 --ignore-dir=env
+--ignore-dir=node_modules
+--ignore-dir=log
+--ignore-dir=doc
+--ignore-dir=coverage
+--ignore-dir=tmp
+--sort-files
+--color
+--follow
+--context=1
+--pager=less -FRSX
