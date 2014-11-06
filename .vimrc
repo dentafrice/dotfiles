@@ -27,6 +27,7 @@ set noswapfile
 set autoread
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+set hidden
 
 " searching
 set incsearch
