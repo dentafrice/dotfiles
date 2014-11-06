@@ -67,9 +67,9 @@
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = .vim/bundle/vim-trailing-whitespace
 	url = git@github.com:bronson/vim-trailing-whitespace.git
-[submodule "/home/uber/.vim/bundle/vim-startify"]
-	path = /home/uber/.vim/bundle/vim-startify
+[submodule ".vim/bundle/vim-startify"]
+	path = .vim/bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify
-[submodule "/home/uber/.vim/bundle/delimMate"]
-	path = /home/uber/.vim/bundle/delimMate
+[submodule ".vim/bundle/delimMate"]
+	path = .vim/bundle/delimMate
 	url = git@github.com:Raimondi/delimitMate.git
