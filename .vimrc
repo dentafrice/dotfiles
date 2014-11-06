@@ -64,6 +64,9 @@ let mapleader = ",""
 set pastetoggle=<F3>
 nnoremap <silent> <Space> :noh<CR>
 
+"" helpers
+nnoremap gr /Reviewers:<CR>A
+
 "" nerdtree
 map <C-n> :NERDTreeTabsToggle<CR> " toggle NERDTree
 
