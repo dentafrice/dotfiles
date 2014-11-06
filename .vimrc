@@ -28,12 +28,17 @@ set autoread
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set hidden
+set tags=.git/tags,.tags
 
 " searching
 set incsearch
 set ignorecase
 set smartcase
-set wildignore+=*.pyc
+set wildignore+=*.pyc,*.o,*.obj,.git
+set wildignore+=*.jar,*.zip,*.md5,*.map,*.png,*.jpg,*.svg,*.min.js
+set wildignore+=*.eot,*.ttf,*.woff,*.pid
+set wildignore+=log,tmp,node_modules
+set wildignore+=bower_components,assets/build,env
 
 " basic controls
 set mouse=a
