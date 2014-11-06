@@ -79,7 +79,6 @@ map <Leader>h <Plug>(easymotion-linebackward)
 nmap <leader>; :CtrlPBuffer<CR>
 
 "" you complete me
-nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
 
 " plugins
