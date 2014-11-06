@@ -54,6 +54,7 @@ set autoindent
 
 " key bindings
 set pastetoggle=<F3>
+nnoremap <silent> <Space> :noh<CR>
 
 "" nerdtree
 map <C-n> :NERDTreeTabsToggle<CR> " toggle NERDTree
