@@ -31,6 +31,7 @@ set hidden
 set tags=.git/tags,.tags
 set splitbelow
 set splitright
+set completeopt=menuone
 
 " searching
 set incsearch
@@ -138,7 +139,7 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 "" you complete me
 let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_key_list_select_completion = []
 let g:ycm_key_list_previous_completion = []
 
