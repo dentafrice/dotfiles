@@ -13,7 +13,9 @@ if [[ $(uname) = 'Darwin' ]]; then
 fi
 
 if [[ "$VIRTUAL_ENV" != "" ]]; then
-    source "$VIRTUAL_ENV/bin/activate"
+    if [ -e "$VIRTUAL_ENV/bin/activate" ]; then
+        source "$VIRTUAL_ENV/bin/activate"
+    fi
 fi
 
 # setup fasd
@@ -31,6 +33,6 @@ export VAGRANT_DEFAULT_PROVIDER=aws
 export PATH=$PATH:$HOME/bin
 
 # Load only OSX things
-if [[ $IS_MAC -eq 1 ]]; then    
+if [[ $IS_MAC -eq 1 ]]; then
     [ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
 fi
