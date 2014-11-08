@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/delimMate"]
 	path = .vim/bundle/delimMate
 	url = git@github.com:Raimondi/delimitMate.git
+[submodule ".pymuxinator"]
+	path = .pymuxinator
+	url = git@github.com:dentafrice/.pymuxinator.git
