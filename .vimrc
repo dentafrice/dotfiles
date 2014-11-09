@@ -9,10 +9,12 @@ set hlsearch " highlights search
 set cursorline " highlights current line
 set showtabline=2
 set laststatus=2
-set scrolloff=3 " show more context at end of buffer
+set scrolloff=5 " show more context at end of buffer
 set colorcolumn=100
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:. " highlight spaces, tabs, and extended lines
+set title
+set foldlevelstart=20 " all folds open when starting a file
 
 " theme
 let g:molokai_original = 1
@@ -32,6 +34,11 @@ set tags=.git/tags,.tags
 set splitbelow
 set splitright
 set completeopt=menuone
+set timeoutlen=1000 ttimeoutlen=0
+
+" better splits
+set splitbelow
+set splitright
 
 " searching
 set incsearch
@@ -103,6 +110,16 @@ nmap <leader>; :CtrlPBuffer<CR>
 
 "" you complete me
 nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
+
+"" better splits
+nnoremap <C-w>- :sp<CR>
+nnoremap <C-w><bar> :vsp<CR>
+
+"" better split navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " plugins
 
