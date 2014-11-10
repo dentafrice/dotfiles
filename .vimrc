@@ -111,6 +111,9 @@ nmap <leader>; :CtrlPBuffer<CR>
 "" you complete me
 nnoremap <leader>g :YcmCompleter GoToDeclaration<CR>
 
+"" goyo
+nnoremap <Leader>G :Goyo<CR>
+
 "" better splits
 nnoremap <C-w>- :sp<CR>
 nnoremap <C-w><bar> :vsp<CR>

@@ -76,3 +76,6 @@
 [submodule ".pymuxinator"]
 	path = .pymuxinator
 	url = git@github.com:dentafrice/.pymuxinator.git
+[submodule ".vim/bundle/goyo.vim"]
+	path = .vim/bundle/goyo.vim
+	url = git@github.com:junegunn/goyo.vim.git
