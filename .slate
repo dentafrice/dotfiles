@@ -17,6 +17,7 @@ layout 3monitors 'iTerm' ${full} 1
 layout 3monitors 'Spotify' ${full} 2
 layout 3monitors 'Google Chrome' ${righthalf} 0
 layout 3monitors 'Airmail' ${lefthalf} 0
+layout 3monitors 'SourceTree' ${lefthalf} 0
 
 bind g:ctrl;alt;cmd layout 3monitors
 
