@@ -20,7 +20,13 @@ layout 3monitors 'Airmail' ${lefthalf} 0
 layout 3monitors 'SourceTree' ${lefthalf} 0
 layout 3monitors 'Things' ${lefthalf} 0
 
+layout 2monitors 'HipChat' ${lefthalf} 0
+layout 2monitors 'Google Chrome' ${righthalf} 0
+layout 2monitors 'iTerm' ${full} 1
+layout 2monitors 'HipChat' ${lefthalf} 0
+
 bind g:ctrl;alt;cmd layout 3monitors
+bind f:ctrl;alt;cmd layout 2monitors
 
 default 3monitors count:3
 
