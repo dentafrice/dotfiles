@@ -24,6 +24,7 @@ layout 2monitors 'HipChat' ${lefthalf} 0
 layout 2monitors 'Google Chrome' ${righthalf} 0
 layout 2monitors 'iTerm' ${full} 1
 layout 2monitors 'HipChat' ${lefthalf} 0
+layout 2monitors 'Spotify' ${lefthalf} 0
 
 bind g:ctrl;alt;cmd layout 3monitors
 bind f:ctrl;alt;cmd layout 2monitors
