@@ -10,6 +10,11 @@ rm -rf ~/.vim
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
+# mutt configuration
+rm -rf ~/.mutt
+ln -sf ~/dotfiles/.mutt ~/.mutt
+ln -sf ~/dotfiles/.muttrc ~/.muttrc
+
 # tmux Configuration
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
