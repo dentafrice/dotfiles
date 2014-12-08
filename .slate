@@ -10,26 +10,55 @@ alias mon-thunderbolt 2560x1440
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias full-main ${full} 0
+
+# Applications
+alias hipchat 'HipChat'
+alias terminal 'iTerm'
+alias spotify 'Spotify'
+alias browser 'Google Chrome'
+alias email 'Airmail'
+alias git 'SourceTree'
+alias things 'Things'
+alias tasks 'OmniFocus'
+alias pass '1Password'
 
 # Layouts
-layout 3monitors 'HipChat' ${full} 2 # put hipchat on laptop
-layout 3monitors 'iTerm' ${full} 1
-layout 3monitors 'Spotify' ${full} 2
-layout 3monitors 'Google Chrome' ${righthalf} 0
-layout 3monitors 'Airmail' ${lefthalf} 0
-layout 3monitors 'SourceTree' ${lefthalf} 0
-layout 3monitors 'Things' ${lefthalf} 0
 
-layout 2monitors 'HipChat' ${lefthalf} 0
-layout 2monitors 'Google Chrome' ${righthalf} 0
-layout 2monitors 'iTerm' ${full} 1
-layout 2monitors 'HipChat' ${lefthalf} 0
-layout 2monitors 'Spotify' ${lefthalf} 0
+## 3 Monitors (2 thunderbolt, 1 Macbook)
+layout 3monitors ${hipchat} ${full} 2 # put hipchat on laptop
+layout 3monitors ${spotify} ${full} 2
+layout 3monitors ${terminal} ${full} 1 # put full screen on middle monitors
+layout 3monitors ${browser} ${righthalf} 0
+layout 3monitors ${email} ${lefthalf} 0
+layout 3monitors ${git} ${lefthalf} 0
+layout 3monitors ${things} ${lefthalf} 0
+layout 2monitors ${tasks} ${lefthalf} 0
 
+## 2 Monitors (2 thunderbolts)
+layout 2monitors ${terminal} ${full} 1 # put full screen on right monitors
+layout 2monitors ${browser} ${righthalf} 0
+layout 2monitors ${hipchat} ${lefthalf} 0
+layout 2monitors ${spotify} ${lefthalf} 0
+layout 2monitors ${tasks} ${lefthalf} 0
+
+## 1 Monitor (Macbook)
+layout 1monitors ${browser} ${full-main}
+layout 1monitors ${terminal} ${full-main}
+layout 1monitors ${spotify} ${full-main}
+layout 1monitors ${hipchat} ${full-main}
+layout 1monitors ${things} ${full-main}
+layout 1monitors ${git} ${full-main}
+layout 1monitors ${tasks} ${full-main}
+
+# Force Layouts
 bind g:ctrl;alt;cmd layout 3monitors
 bind f:ctrl;alt;cmd layout 2monitors
+bind s:ctrl;alt;cmd layout 1monitors
 
+# Layout Defaults
 default 3monitors count:3
+default 2monitors count:2
 
 # Resize Bindings
 bind right:alt       resize +10% +0
