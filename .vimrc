@@ -182,3 +182,4 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd! BufNewFile,BufRead *.applescript,*.scpt    setfiletype applescript
