@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import email
+import os
+import re
+import subprocess
+import sys
+
+APPLESCRIPT_PATH = os.path.dirname(os.path.realpath(__file__)) + '/task_adder.applescript'
+
+message = email.message_from_file(sys.stdin)
+
+# Pull subject out of headers to be used as the task title.
+subject = message['subject']
+subject = "".join(subject.split("\n"))
+
+# Pull links out of email body to be used for the task note.
+content = message.get_payload()
+extracted_links = re.findall(r'(https?://\S+)', content)
+formatted_links = "\n".join(extracted_links)
+
+# Call the applescript file responsible for adding the task into omnifocus
+subprocess.call(
+    ['osascript', APPLESCRIPT_PATH, subject, formatted_links]
+)
