@@ -69,6 +69,9 @@ set cindent
 set smartindent
 set autoindent
 
+" fugative settings
+set diffopt+=vertical
+
 " key bindings
 let mapleader = ",""
 set pastetoggle=<F3>
