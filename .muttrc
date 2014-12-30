@@ -27,7 +27,7 @@ set edit_headers
 
 # Sidebar Patch --------------------------------------
 set sidebar_delim   = '  │'
-set sidebar_visible = no
+set sidebar_visible = yes
 set sidebar_width   = 24
 color sidebar_new color221 color233
 
