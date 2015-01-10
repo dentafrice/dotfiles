@@ -22,7 +22,7 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set wait_key = no
-set editor="/usr/local/bin/vim +'/^$'"
+# set editor="/usr/local/bin/vim +'/^$'"
 set edit_headers
 
 # Sidebar Patch --------------------------------------
