@@ -60,6 +60,9 @@ bind index <space>  collapse-thread
 # Ctrl-R to mark all as read
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 
+# ,dn to delete all Nagios emails, useful after getting spammed
+macro index,pager ,dn "DService Alert<enter><tab>"
+
 # Call out to email parser to add to omnifocus
 macro index,pager \Co <pipe-entry>'~/dotfiles/scripts/omnifocus/email_parser'<enter>
 
