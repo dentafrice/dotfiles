@@ -36,3 +36,6 @@ export PATH=$PATH:$HOME/bin
 if [[ $IS_MAC -eq 1 ]]; then
     [ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
 fi
+
+# because I accidently press Ctrl-s too much...
+stty -ixon
