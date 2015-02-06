@@ -1,6 +1,6 @@
 function update_dotfiles() {
-    cd ~/dotfiles
+    pushd ~/dotfiles
     ./update.sh
-    cd -
+    popd
 }
 

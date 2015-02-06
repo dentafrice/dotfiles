@@ -1,5 +1,5 @@
 function push_dotfiles() {
-    cd ~/dotfiles
+    pushd ~/dotfiles
     git push origin master
-    cd -
+    popd
 }
