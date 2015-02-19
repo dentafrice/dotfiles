@@ -35,6 +35,7 @@ export PATH=$PATH:$HOME/bin
 # Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then
     [ -s "/usr/local/bin/virtualenvwrapper.sh" ] && . /usr/local/bin/virtualenvwrapper.sh
+    [ -s "$HOME/.nvm/nvm.sh" ] && . $HOME/.nvm/nvm.sh
 fi
 
 # because I accidently press Ctrl-s too much...
