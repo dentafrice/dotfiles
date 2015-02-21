@@ -29,6 +29,7 @@ for f in "$HOME"/dotfiles/inc/theme/*.zsh; do source $f; done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export UBER_HOME="$HOME/Uber"
+export UBER_OWNER="mingle@uber.com"
 export VAGRANT_DEFAULT_PROVIDER=aws
 export PATH=$PATH:$HOME/bin
 
