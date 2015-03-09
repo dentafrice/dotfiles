@@ -9,3 +9,11 @@ endsnippet
 snippet pdb "pdb set trace"
 import pdb; pdb.set_trace()
 endsnippet
+
+snippet testcase "testcase"
+from cleopatra.lib.testing import TestCase
+
+
+class TestClass(TestCase):
+    pass
+endsnippet

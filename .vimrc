@@ -156,7 +156,7 @@ let g:ctrlp_open_new_file = 't'
 
 "" syntastic
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--max-line-length=100'
+let g:syntastic_python_flake8_args = '--max-line-length=100 --ignore=W503'
 
 "" easy motion
 let g:EasyMotion_smartcase = 1
