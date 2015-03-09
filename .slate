@@ -14,6 +14,7 @@ alias full-main ${full} 0
 
 # Applications
 alias hipchat 'HipChat'
+alias slack 'Slack'
 alias terminal 'iTerm'
 alias spotify 'Spotify'
 alias browser 'Google Chrome'
@@ -27,6 +28,7 @@ alias pass '1Password'
 
 ## 3 Monitors (2 thunderbolt, 1 Macbook)
 layout 3monitors ${hipchat} ${full} 2 # put hipchat on laptop
+layout 3monitors ${slack} ${full} 2 # put slack on laptop
 layout 3monitors ${spotify} ${full} 2
 layout 3monitors ${terminal} ${full} 1 # put full screen on middle monitors
 layout 3monitors ${browser} ${righthalf} 0
@@ -39,6 +41,7 @@ layout 2monitors ${tasks} ${lefthalf} 0
 layout 2monitors ${terminal} ${full} 1 # put full screen on right monitors
 layout 2monitors ${browser} ${righthalf} 0
 layout 2monitors ${hipchat} ${lefthalf} 0
+layout 2monitors ${slack} ${lefthalf} 0
 layout 2monitors ${spotify} ${lefthalf} 0
 layout 2monitors ${tasks} ${lefthalf} 0
 
@@ -47,6 +50,7 @@ layout 1monitors ${browser} ${full-main}
 layout 1monitors ${terminal} ${full-main}
 layout 1monitors ${spotify} ${full-main}
 layout 1monitors ${hipchat} ${full-main}
+layout 1monitors ${slack} ${full-main}
 layout 1monitors ${things} ${full-main}
 layout 1monitors ${git} ${full-main}
 layout 1monitors ${tasks} ${full-main}
