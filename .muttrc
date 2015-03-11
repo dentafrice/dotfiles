@@ -25,6 +25,7 @@ set thorough_search      # strip headers and eval mimes before searching
 set wait_key = no
 # set editor="/usr/local/bin/vim +'/^$'"
 set edit_headers
+set sleep_time = 0       # don't wait forever while switching mailboxes
 
 # Sidebar Patch --------------------------------------
 set sidebar_delim   = ' '
