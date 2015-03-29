@@ -32,3 +32,6 @@ ln -sf ~/dotfiles/.ackrc ~/.ackrc
 
 # other
 ln -sf ~/dotfiles/.slate ~/.slate
+
+# vim plugin configuration
+vim +PluginInstall +qall
