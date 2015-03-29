@@ -32,6 +32,7 @@ export UBER_HOME="$HOME/Uber"
 export UBER_OWNER="mingle@uber.com"
 export VAGRANT_DEFAULT_PROVIDER=aws
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:/Users/mingle/Library/Android/sdk/platform-tools
 
 # Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then

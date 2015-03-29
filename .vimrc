@@ -1,4 +1,31 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'gmarik/Vundle.vim' " required
+Plugin 'groenewege/vim-less'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'majutsushi/tagbar'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'Raimondi/delimitMate'
+Plugin 'rodjek/vim-puppet'
+Plugin 'SirVer/ultisnips'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
 
 " display
 filetype plugin indent on
