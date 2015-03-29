@@ -2,3 +2,4 @@
 *.swp
 *.swo
 .mutt/cache
+.vim/bundle/**
