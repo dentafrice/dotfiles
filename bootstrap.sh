@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-. ~/dotfiles/update.sh
-
 # prezto install
 # . ~/dotfiles/install_prezto.sh
 
@@ -33,5 +31,4 @@ ln -sf ~/dotfiles/.ackrc ~/.ackrc
 # other
 ln -sf ~/dotfiles/.slate ~/.slate
 
-# vim plugin configuration
-vim +PluginInstall +qall
+. ~/dotfiles/update.sh
