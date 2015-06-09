@@ -13,7 +13,7 @@ application/pdf; ~/.mutt/view_attachment.sh %s pdf
 
 # HTML
 text/html; /usr/local/bin/lynx -dump -width=78 -nolist %s | sed 's/^   //'; copiousoutput; needsterminal; nametemplate=%s.html
-# text/html; ~/.mutt/view_attachment.sh %s html
+text/plain; cat; copiousoutput; edit=$VISUAL %s
 
 # Unidentified files
 application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
