@@ -15,6 +15,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'majutsushi/tagbar'
+Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rodjek/vim-puppet'
@@ -26,6 +27,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
+
+" Move visual block
+vnoremap J :m '>+1<CR>gv
+vnoremap K :m '<-2<CR>gv
 
 " display
 filetype plugin indent on
@@ -95,6 +100,9 @@ autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 set cindent
 set smartindent
 set autoindent
+
+" wrapping
+au FileType gitcommit set tw=100
 
 " fugative settings
 set diffopt+=vertical
@@ -268,3 +276,18 @@ endfunction
 " Command to be called.
 com Fip :set tw=0<Bar>:%call FirstInPost()
 au BufRead mutt* :Fip
+
+" Delete buffers via Ctrl-P
+let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
+
+func! MyCtrlPMappings()
+    nnoremap <buffer> <silent> <c-@> :call <sid>DeleteBuffer()<cr>
+endfunc
+
+func! s:DeleteBuffer()
+    let line = getline('.')
+    let bufid = line =~ '\[\d\+\*No Name\]$' ? str2nr(matchstr(line, '\d\+'))
+        \ : fnamemodify(line[2:], ':p')
+    exec "bd" bufid
+    exec "norm \<F5>"
+endfunc
