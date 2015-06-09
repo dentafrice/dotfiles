@@ -1,19 +1,42 @@
-alias dotfiles="cd ~/dotfiles/"
+# Arc
+alias ad='arc diff'
+alias adp='arc diff --preview'
 
+# Clipboard
 if [[ $IS_LINUX -eq 1 ]]; then
-    alias work="tmux attach -t work"
-    alias sr="supervisorctl restart"
-    alias sst="supervisorctl status"
     alias clip="nc --send-only localhost 8377"
 else
     alias clip="nc localhost 8377"
 fi
 
+# Dotfiles
+alias dotfiles="cd ~/dotfiles/"
+
+# FASD
 alias v='fasd -e vim'
-alias tkill='tmux kill-session -t'
-alias ta='tmux attach -t'
-alias tls='tmux ls'
+
+# GIT
+alias ga="git add"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gl="git pull"
+alias gp="git push"
+alias gst="git status"
+
 alias top_committers='git shortlog -sne'
-alias ad='arc diff'
-alias adp='arc diff --preview'
+
+# Supervisor
+alias sr="supervisorctl restart"
+alias sst="supervisorctl status"
+
+# Tmux
+alias ta='tmux attach -t'
+alias tkill='tmux kill-session -t'
+alias tls='tmux ls'
+alias tn='tmux new -s'
+
+# uDeploy
 alias urc='ur cleopatra'

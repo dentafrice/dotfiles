@@ -24,15 +24,8 @@ if which fasd >/dev/null; then
 fi
 
 # setup custom stuff
-for f in "$HOME"/dotfiles/inc/zsh/*.zsh; do source $f; done
-for f in "$HOME"/dotfiles/inc/theme/*.zsh; do source $f; done
+for f in "$HOME"/dotfiles/inc/zsh/**/*.zsh; do source $f; done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export UBER_HOME="$HOME/Uber"
-export UBER_OWNER="mingle@uber.com"
-export VAGRANT_DEFAULT_PROVIDER=aws
-export PATH=$PATH:$HOME/bin
-export PATH=$PATH:/Users/mingle/Library/Android/sdk/platform-tools
 
 # Load only OSX things
 if [[ $IS_MAC -eq 1 ]]; then
