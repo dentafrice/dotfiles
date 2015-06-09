@@ -40,3 +40,6 @@ alias tn='tmux new -s'
 
 # uDeploy
 alias urc='ur cleopatra'
+
+# Utils
+alias count='sort | uniq -c | sort -nr'
