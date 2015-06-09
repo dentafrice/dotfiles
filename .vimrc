@@ -25,6 +25,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 " display
@@ -41,7 +43,6 @@ set colorcolumn=100
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:. " highlight spaces, tabs, and extended lines
 set title
-set foldlevelstart=20 " all folds open when starting a file
 
 " theme
 let g:molokai_original = 1
