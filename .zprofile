@@ -4,6 +4,11 @@
 
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
+
+  # Setting PATH for Python 2.7
+  # The orginal version is saved in .zprofile.pysave
+  PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+  export PATH
 fi
 
 #
@@ -68,4 +73,3 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-
