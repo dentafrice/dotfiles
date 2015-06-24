@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
+" Vundle packages
 call vundle#begin()
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
@@ -109,9 +110,12 @@ au FileType gitcommit set tw=100
 set diffopt+=vertical
 
 " key bindings
-let mapleader = ",""
+let mapleader = ","
 set pastetoggle=<F3>
 nnoremap <silent> <Space> :noh<CR>
+
+" quick save with ,s
+noremap <leader>s :update<CR>
 
 if has('mac')
     nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
