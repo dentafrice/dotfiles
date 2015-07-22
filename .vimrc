@@ -182,7 +182,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 "" nerd tree
 "let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.pyc$', '\.swp$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '^env']
 
 "" gitgutter
 let g:gitgutter_realtime = 1

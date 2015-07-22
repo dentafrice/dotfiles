@@ -25,6 +25,7 @@ alias gdc="git diff --cached"
 alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
+alias gsta="gst --untracked-files=all"
 
 alias top_committers='git shortlog -sne'
 
@@ -43,3 +44,4 @@ alias urc='ur cleopatra'
 
 # Utils
 alias count='sort | uniq -c | sort -nr'
+alias uuid="uuidgen | perl -ne 'print lc' | tr -d '\n' | pbcopy"
