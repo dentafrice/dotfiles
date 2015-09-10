@@ -31,3 +31,6 @@ ln -sf ~/dotfiles/.slate ~/.slate
 # x
 ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
 ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
+
+# i3
+ln -sf ~/dotfiles/.i3 ~/.i3
