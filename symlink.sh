@@ -27,3 +27,7 @@ ln -sf ~/dotfiles/.ackrc ~/.ackrc
 
 # other
 ln -sf ~/dotfiles/.slate ~/.slate
+
+# x
+ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
+ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
