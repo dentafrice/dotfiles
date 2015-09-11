@@ -34,3 +34,4 @@ ln -sf ~/dotfiles/.Xmodmap ~/.Xmodmap
 
 # i3
 ln -sf ~/dotfiles/.i3 ~/.i3
+ln -sf ~/dotfiles/.i3/.i3status.conf ~/.i3status.conf
