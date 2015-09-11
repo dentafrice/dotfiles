@@ -35,6 +35,9 @@ call vundle#end()
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
 
+" folds
+set foldlevel=20
+
 " display
 filetype plugin indent on
 syntax enable
