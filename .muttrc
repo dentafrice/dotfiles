@@ -28,10 +28,13 @@ set edit_headers
 set sleep_time = 0       # don't wait forever while switching mailboxes
 
 # Sidebar Patch --------------------------------------
-set sidebar_delim   = ' '
-set sidebar_visible = yes
-set sidebar_width   = 24
+# set sidebar_delim   = ' '
+# set sidebar_visible = yes
+# set sidebar_width   = 24
 # color sidebar_new color221 color233
+# bind index,pager <down>   sidebar-next
+# bind index,pager <up>     sidebar-prev
+# bind index,pager <right>  sidebar-open
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
@@ -75,11 +78,6 @@ macro index o "<shell-escape>/usr/local/bin/offlineimap -qf INBOX<enter>" "run o
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
-
-# Sidebar Navigation ---------------------------------
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
 
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
