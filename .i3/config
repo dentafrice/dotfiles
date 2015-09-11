@@ -4,6 +4,7 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+exec --no-startup-id feh --bg-fill ~/Pictures/mgs1.jpg
 
 # i3 config file (v4)
 #
