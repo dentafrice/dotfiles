@@ -7,7 +7,7 @@
 # exec --no-startup-id /usr/bin/gnome-keyring-daemon
 # exec --no-startup-id /usr/bin/gnome-screensaver &
 # exec --no-startup-id /usr/bin/gnome-settings-daemon
-exec --no-startup-id feh --bg-fill ~/Pictures/mgs1.jpg
+exec --no-startup-id feh --bg-fill ~/dotfiles/pictures/desktop.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id export_x_info
 exec --no-startup-id dropbox start
