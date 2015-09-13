@@ -1,17 +1,26 @@
 #!/usr/bin/python
 import re, subprocess
+import os
 import sys
 
 
 def get_keychain_pass(account=None, server=None):
     if sys.platform == 'linux2':
-        import gnomekeyring
+        path = '/home/mingle/private_dotfiles/mingle-smtp-password.gpg'
 
-        for item_id in gnomekeyring.list_item_ids_sync('email'):
-            item = gnomekeyring.item_get_info_sync('email', item_id)
+        args = [
+            'gpg2',
+            '--use-agent',
+            '--quiet',
+            '--batch',
+            '-d',
+            path,
+        ]
 
-            if item.get_display_name() == 'work':
-                return item.get_secret()
+        try:
+            return subprocess.check_output(args).strip()
+        except subprocess.CalledProcessError:
+            return ''
     else:
         params = {
             'security': '/usr/bin/security',
