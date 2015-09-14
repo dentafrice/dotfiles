@@ -5,6 +5,8 @@ alias adp='arc diff --preview'
 # Clipboard
 if [[ $IS_LINUX -eq 1 ]]; then
     alias clip="nc --send-only localhost 8377"
+    alias pbcopy="xclip -selection clipboard"
+    alias pbpaste="xclip -o -selection clipboard"
 else
     alias clip="nc localhost 8377"
 fi
