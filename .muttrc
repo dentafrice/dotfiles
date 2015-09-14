@@ -72,8 +72,8 @@ macro index,pager ,dn "DService Alert<enter><tab>"
 macro index,pager \Co <pipe-entry>'~/dotfiles/scripts/omnifocus/email_parser'<enter>
 
 # Sync email
-macro index O "<shell-escape>/usr/local/bin/offlineimap<enter>"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>/usr/local/bin/offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
+macro index O "<shell-escape>/usr/bin/offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>/usr/bin/offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
@@ -101,7 +101,7 @@ bind pager R  group-reply
 # View attachments properly.
 bind attach <return> view-mailcap
 
-macro pager \Cu "|/usr/local/bin/urlview<enter>" "call urlview to open links"
+macro pager \Cu "|/usr/bin/urlview<enter>" "call urlview to open links"
 
 # Compose View Options -------------------------------
 set envelope_from                    # which from?
