@@ -21,5 +21,5 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-eval "$(gpg-agent --daemon)"
+eval "$(gpg-agent --daemon --write-env-file ~/.gnupg/.agent)"
 export GPG_AGENT_INFO  # the env file does not contain the export statement
