@@ -14,6 +14,9 @@ fi
 # Dotfiles
 alias dotfiles="cd ~/dotfiles/"
 
+# Emacs
+alias emacs="emacs -nw"
+
 # FASD
 alias v='fasd -e vim'
 

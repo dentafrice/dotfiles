@@ -5,6 +5,9 @@ rm -rf ~/.vim
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
+# spacemacs configuration
+ln -sf ~/dotfiles/.spacemacs ~/.spacemacs
+
 # mutt configuration
 rm -rf ~/.mutt
 ln -sf ~/dotfiles/.mutt ~/.mutt
