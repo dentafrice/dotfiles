@@ -7,7 +7,6 @@ set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
-set signature        = ~/.mutt/sig           # my signature file
 
 # Basic Options --------------------------------------
 auto_view text/x-vcard text/html text/enriched
@@ -138,5 +137,10 @@ bind pager N search-opposite
 macro index a "<limit>all\n" "show all messages (undo limit)"
 
 # Account settings
-source ~/private_dotfiles/.mutt/.muttrc
+source ~/private_dotfiles/.mutt/mboxes
+source ~/private_dotfiles/.mutt/work
+
+folder-hook aliases/work source ~/private_dotfiles/.mutt/work
+folder-hook aliases/personal source ~/private_dotfiles/.mutt/personal
+
 source ~/private_dotfiles/.mutt/gpg.rc
