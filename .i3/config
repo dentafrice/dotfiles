@@ -46,6 +46,9 @@ bindsym $mod+ctrl+l exec --no-startup-id lock_screen
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# print screen
+bindsym $mod+Print exec "scrot -u ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
+
 # start dmenu (a program launcher)
 # don't forget to get xft support here.
 bindsym $mod+d exec --no-startup-id dmenu_run -i -p 'mingle' -fn 'Ubuntu Mono:bold:pixelsize=20'
