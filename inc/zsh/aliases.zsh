@@ -2,6 +2,9 @@
 alias ad='arc diff'
 alias adp='arc diff --preview'
 
+# Todo
+alias t='~/.todo/todo.sh'
+
 # Clipboard
 if [[ $IS_LINUX -eq 1 ]]; then
     alias clip="nc --send-only localhost 8377"
