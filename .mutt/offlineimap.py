@@ -6,7 +6,10 @@ import sys
 
 def get_keychain_pass(account=None, server=None):
     if sys.platform == 'linux2':
-        path = '/home/mingle/private_dotfiles/mingle-smtp-password.gpg'
+        if account == 'mingle@uber.com':
+            path = '/home/mingle/private_dotfiles/mingle-smtp-password.gpg'
+        elif account == 'me@caleb.io':
+            path = '/home/mingle/private_dotfiles/me-caleb-io-smtp-password.gpg'
 
         args = [
             'gpg2',
