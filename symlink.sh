@@ -52,3 +52,6 @@ ln -sf ~/dotfiles/dunstrc ~/.config/dunst/dunstrc
 # todo
 rm -rf ~/.todo
 ln -sf ~/dotfiles/.todo ~/.todo
+
+# notmuch configuration
+ln -sf ~/dotfiles/.notmuch-config ~/.notmuch-config
