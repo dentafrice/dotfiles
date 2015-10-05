@@ -1,0 +1,136 @@
+#!/usr/bin/env python
+
+# Re-implementation of
+#  http://upsilon.cc/~zack/blog/posts/2011/01/how_to_use_Notmuch_with_Mutt/mutt-notmuch
+# in Python with no third-party dependencies
+
+# License: GNU General Public License (GPL), version 3 or above
+
+import argparse
+import errno
+import mailbox
+import os
+import os.path
+import readline
+import rlcompleter
+import shutil
+import subprocess
+import re
+
+DEFAULT_RESULTS_DIR = os.path.expanduser("~/.cache/mutt_results")
+
+HISTFILE = os.path.expanduser('~/.mutt-notmuch-history')
+
+
+def empty_maildir(odir):
+    try:
+        shutil.rmtree(odir)
+    except OSError as e:
+        if e.errno != errno.ENOENT:
+            raise
+    mailbox.Maildir(odir, create=True)
+
+
+class mutt_notmuch_completer(rlcompleter.Completer):
+    KEYWORDS = ('from', 'to', 'subject', 'attachment', 'tag', 'id', 'thread',
+                'folder', 'path', 'date')
+
+    EMAIL_BRACKET_RE = re.compile(r'.*<([^>]+)>.*')
+    IS_OPERATOR_RE = re.compile(r'.*:\s*$')
+
+    def __init__(self, *args, **kwargs):
+        self._aliases = None
+        rlcompleter.Completer.__init__(self)
+
+    @property
+    def aliases(self):
+        if self._aliases is None:
+            try:
+                self._aliases = []
+                with open(os.path.expanduser('~/.mutt/aliases'), 'r') as f:
+                    for line in f:
+                        md = self.EMAIL_BRACKET_RE.match(line)
+                        if md:
+                            self._aliases.append(md.group(1))
+            except IOError:
+                self._aliases = []
+        return self._aliases
+
+    def complete(self, text, state, buf=None):
+        try:
+            if buf is None:
+                buf = readline.get_line_buffer()
+            current_word = re.split('\s+', text)[-1]
+            completions = []
+            if not self.IS_OPERATOR_RE.match(buf):
+                for k in self.KEYWORDS:
+                    if k.startswith(current_word):
+                        completions.append(k + ':')
+            for to in self.aliases:
+                if to.startswith(current_word):
+                    completions.append(to)
+            if state < len(completions):
+                return completions[state]
+            return None
+        except Exception as e:
+            print e
+            return None
+
+
+def read_input(prompt):
+    if 'libedit' in readline.__doc__:
+        readline.parse_and_bind("bind ^I rl_complete")
+    else:
+        readline.parse_and_bind("tab: complete")
+    readline.set_completer(mutt_notmuch_completer().complete)
+    try:
+        readline.read_history_file(HISTFILE)
+    except IOError:
+        pass
+    rv = raw_input(prompt)
+    readline.write_history_file(HISTFILE)
+    return rv
+
+
+def search(args):
+    empty_maildir(args.output_dir)
+    if args.prompt:
+        query = read_input('search: ')
+    elif args.query:
+        query = ' '.join(args.query)
+    else:
+        raise ValueError('Need either --prompt or a query')
+    if query.strip() == '?':
+        subprocess.check_call('notmuch help search', shell=True)
+        return
+
+    p = subprocess.Popen(
+        'notmuch search --duplicate=1 --output=files %s' % query,
+        shell=True, stdout=subprocess.PIPE
+    )
+    od = os.path.join(args.output_dir, 'cur')
+    for line in p.stdout:
+        path = line.strip()
+        if args.pretend:
+            print path
+        else:
+            base = os.path.basename(path)
+            os.symlink(path, os.path.join(od, base))
+    p.wait()
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--output-dir', default=DEFAULT_RESULTS_DIR)
+    parser.add_argument('--prompt', action='store_true')
+    parser.add_argument('--pretend', action='store_true')
+    parser.add_argument('action', choices=('search', 'thread'))
+    parser.add_argument('query', nargs='*')
+    args = parser.parse_args()
+
+    if args.action == 'search':
+        search(args)
+
+
+if __name__ == '__main__':
+    main()
