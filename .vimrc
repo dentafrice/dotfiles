@@ -100,6 +100,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype jade setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 set cindent
