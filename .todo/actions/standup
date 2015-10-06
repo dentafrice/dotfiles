@@ -3,7 +3,6 @@
 require 'date'
 IMPEDIMENT_TAG = "@blocked"
 
-
 if ARGV[0] == "usage"
   puts "  Standup Report:"
   puts "    standup"
@@ -41,13 +40,21 @@ else
 
   #dump out the list
   done.each { |item|
-      data =  /x\s(?<date>\d{4}-\d{2}-\d{2})\s(?<task>.*)/.match(item)
-      task_date = Date.strptime(data[:date], '%Y-%m-%d')
-      #puts task_date
-      if task_date == yesterday
-	  puts "+ #{data[:task]}"
-      elsif task_date == today
-	  todays_completed.push(data[:task])
+      if ARGV[1]
+          passes_filter = item.include?(ARGV[1])
+      else
+          passes_filter = true
+      end
+
+      if passes_filter
+          data =  /x\s(?<date>\d{4}-\d{2}-\d{2})\s(?<task>.*)/.match(item)
+          task_date = Date.strptime(data[:date], '%Y-%m-%d')
+          #puts task_date
+          if task_date == yesterday
+          puts "+ #{data[:task]}"
+          elsif task_date == today
+          todays_completed.push(data[:task])
+          end
       end
   }
 
@@ -63,23 +70,37 @@ else
   puts " Today: #{Date.today}"
   puts "========================================"
 
-  #dumpe TODAY's COMPELTED
+  #dumpe TODAY's COMPLETED
   todays_completed.each { |task|
-      puts "+ #{task}"
+      if ARGV[1]
+          passes_filter = task.include?(ARGV[1])
+      else
+          passes_filter = true
+      end
+
+      puts "+ #{task}" if passes_filter
   }
 
   #dump  TODAY's List
   todo.each { |task|
-      if task.include?(IMPEDIMENT_TAG)
-	  impediments.push(task)
+      if ARGV[1]
+          passes_filter = task.include?(ARGV[1])
       else
-	  puts "- #{task}"
+          passes_filter = true
+      end
+
+      if passes_filter
+          if task.include?(IMPEDIMENT_TAG)
+          impediments.push(task)
+          else
+          puts "- #{task}"
+          end
       end
   }
   #generate IMPEDIMENT's List
   if impediments.length > 0
       puts "\n========================================"
-      puts " Impediments: #{Date.today}"
+      puts " Blocked: #{Date.today}"
       puts "========================================"
 
       impediments.each { |task|
