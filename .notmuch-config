@@ -31,6 +31,7 @@ path=/home/mingle/.mail
 [user]
 name=Caleb Mingle
 primary_email=mingle@uber.com
+other_email=me@caleb.io;caleb@calebmingle.com;caleb@mingle.cm
 
 # Configuration for "notmuch new"
 #
