@@ -105,7 +105,7 @@ else
     puts "========================================"
 
     impediments.each { |task|
-      puts"i #{task}"
+      puts"! #{task}"
     }
   end
 
