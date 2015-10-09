@@ -130,7 +130,7 @@ noremap <leader>s :update<CR>
 if has('mac')
     nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
 elseif has('unix')
-    nnoremap <leader>y :call system('nc --send-only localhost 8377', @0)<CR>
+    nnoremap <leader>y :call system('xclip -f -sel clipboard', @0)<CR>
 endif
 
 "" helpers
