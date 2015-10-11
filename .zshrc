@@ -38,3 +38,6 @@ fi
 
 # because I accidently press Ctrl-s too much...
 stty -ixon
+
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
