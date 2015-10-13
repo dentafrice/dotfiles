@@ -19,6 +19,16 @@ else
   done = done.split($/)
   done.reverse!
 
+  #read TODO file
+  todo = File.read(ENV['TODO_FILE'])
+  todo = todo.split($/)
+
+  filter = ARGV[1] or nil
+
+  if filter
+    done = done.select { |item| item.include?(filter) }
+    todo = todo.select { |item| item.include?(filter) }
+  end
 
   # ==============================
   #    generate YESTERDAY's List
@@ -30,13 +40,21 @@ else
     data = /x\s(?<date>\d{4}-\d{2}-\d{2})\s(?<task>.*)/.match(done[i]);
     yesterday  = Date.strptime(data[:date], '%Y-%m-%d')
     i += 1
-  end until today != yesterday
+  end until today != yesterday and !yesterday.sunday? and !yesterday.saturday?
+
+  if today.mjd - yesterday.mjd <= 1
+    label = "Yesterday"
+  else
+    label = yesterday.strftime('%A')
+  end
 
   puts "\n========================================"
-  puts "Yesterday: #{yesterday}"
+  puts "#{label}: #{yesterday}"
   puts "========================================"
 
+
   #dump out the list
+  done.sort!
   done.each { |item|
     if ARGV[1]
       passes_filter = item.include?(ARGV[1])
@@ -52,14 +70,13 @@ else
         puts "+ #{data[:task]}"
       elsif task_date == today
         todays_completed.push(data[:task])
+      elsif task_date < today and task_date > yesterday
       end
     end
   }
 
+  # TODO: do stuff with "other_tasks"
 
-  #read TODO file
-  todo = File.read(ENV['TODO_FILE'])
-  todo = todo.split($/)
   # ==============================
   #    generate TODAY's List
   # ==============================
