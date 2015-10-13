@@ -31,9 +31,9 @@ set sidebar_delim   = ' | '
 set sidebar_visible = yes
 set sidebar_width   = 24
 color sidebar_new color221 default
-bind index,pager <down>   sidebar-next
-bind index,pager <up>     sidebar-prev
-bind index,pager <right>  sidebar-open
+bind index,pager \Cj   sidebar-next
+bind index,pager \Ck     sidebar-prev
+bind index,pager \Cl  sidebar-open
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
