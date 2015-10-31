@@ -5,9 +5,6 @@ rm -rf ~/.vim
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
-# spacemacs configuration
-ln -sf ~/dotfiles/.spacemacs ~/.spacemacs
-
 # tmux Configuration
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
@@ -22,9 +19,6 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # ack configuration
 ln -sf ~/dotfiles/.ackrc ~/.ackrc
-
-# other
-ln -sf ~/dotfiles/.slate ~/.slate
 
 # x
 ln -sf ~/dotfiles/.xinitrc ~/.xinitrc
