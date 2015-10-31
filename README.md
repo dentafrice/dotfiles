@@ -1,4 +1,4 @@
-Dotfiles
+Dotfiles - DEPRECATED
 ========
 
-Lots of stuff here.
+All of this moved out into separate modules and linked by ansible.  Here for the history.
