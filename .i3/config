@@ -48,6 +48,7 @@ bindsym $mod+Shift+q kill
 
 # print screen
 bindsym $mod+Print exec "scrot -u ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
+bindsym $mod+Shift+Print exec "scrot -s ~/Downloads/Screenshot%Y-%m-%d%H:%M:%S.png"
 
 # start dmenu (a program launcher)
 # don't forget to get xft support here.
