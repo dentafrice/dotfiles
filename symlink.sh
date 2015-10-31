@@ -5,9 +5,6 @@ rm -rf ~/.vim
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
-# tmux Configuration
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-
 # tmuxinator Configuration
 rm -rf ~/.pymuxinator
 rm -rf ~/.tmuxinator
