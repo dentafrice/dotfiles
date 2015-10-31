@@ -14,9 +14,6 @@ ln -sf ~/dotfiles/.pymuxinator ~/.tmuxinator
 # git Configuration
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
-# ack configuration
-ln -sf ~/dotfiles/.ackrc ~/.ackrc
-
 # i3
 rm -rf ~/.i3
 ln -sf ~/dotfiles/.i3 ~/.i3
