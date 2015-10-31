@@ -8,11 +8,6 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 # spacemacs configuration
 ln -sf ~/dotfiles/.spacemacs ~/.spacemacs
 
-# mutt configuration
-rm -rf ~/.mutt
-ln -sf ~/dotfiles/.mutt ~/.mutt
-ln -sf ~/dotfiles/.muttrc ~/.muttrc
-
 # tmux Configuration
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
