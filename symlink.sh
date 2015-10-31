@@ -43,7 +43,3 @@ ln -sf ~/dotfiles/bin ~/bin
 # dunst
 mkdir -p ~/.config/dunst
 ln -sf ~/dotfiles/dunstrc ~/.config/dunst/dunstrc
-
-# todo
-rm -rf ~/.todo
-ln -sf ~/dotfiles/.todo ~/.todo
